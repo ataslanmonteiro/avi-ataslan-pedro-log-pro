@@ -9,18 +9,13 @@
 
 
 function contarVogais(frase) {
-    
   let vogais = "aeiouáéíóúâêîôûãõAEIOUÁÉÍÓÚÂÊÎÔÛÃÕ";
   let contador = 0;
-
   for(let char of frase) {
     if(vogais.includes(char)) {
       contador++;
     }
   }
-
-  return contador;
-    
+  return contador;    
 }
-
 module.exports = {contarVogais}
