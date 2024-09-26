@@ -13,8 +13,19 @@
  * Saída esperada: true.
 */
 
-function validarSenhaForte() {
-        // Sua implementação aqui.
+function validarSenhaForte(senha) {
+  // Eu verifico o comprimento da senha
+  if (senha.length < 6 || senha.length > 10) {
+    return false;
+  }
+    
+  // Eu uso as expressões regulares para verificar se os requisitos atendem
+  const temMaiuscula = /[A-Z]/.test(senha);
+  const temNumero = /\d/.test(senha);
+  const temEspecial = /[@#&$%]/.test(senha);
+    
+  // Ele vai me retorna true se todas as condições forem atendidas
+  return temMaiuscula && temNumero && temEspecial;
 }
 
 module.exports = {validarSenhaForte};
